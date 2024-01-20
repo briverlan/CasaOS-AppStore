@@ -5,7 +5,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: neosmemo/memos:0.17.0
+    image: neosmemo/memos
     deploy:
       resources:
         reservations:
@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/memos/memos
+        source: /DATA/AppData/memos
         target: /var/opt/memos
     x-casaos:
       envs:
